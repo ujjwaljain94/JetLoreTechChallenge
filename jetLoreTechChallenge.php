@@ -160,7 +160,7 @@
       $i = 0;
       $count = 0;
 
-      while($i < strlen($this->inputStr) && $count < sizeof($this->processedStrFlatStructure)) {
+      while($i < strlen($this->inputStr)) {
         if($i == $this->processedStrFlatStructure[$count]['startIndex']) {
           $this->formattedString .= FormatTypeFactory::getInstanceType($this->processedStrFlatStructure[$count]['type'])->formatTypeString($this->processedStrFlatStructure[$count]['word']);
           $i += ($this->processedStrFlatStructure[$count]['endIndex'] - $this->processedStrFlatStructure[$count]['startIndex']);
